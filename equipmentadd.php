@@ -6,7 +6,7 @@
 	<div class="main-wrapper">
 		<h2>Equipment</h2>
 		<?php
-			if (isset($_SESSION['u_id'])){
+			if (isset($_SESSION['u_id']) =='admin'){
 				echo "<h3>Add Equipment</h3>
 					<form class='equipmentadd-form' action='includes/equipmentadd.inc.php' method='POST'>
 						<input type='text' name='name' placeholder='Equipment Name'></input>
@@ -33,7 +33,7 @@
 						<button type='submit' name'submit'>Add</button>
 					</form>";
 			}else{
-				echo "<h3>Please Login or Signup to view this page</h3>";
+				echo "<h3>You must be an admin to access this page</h3>";
 			}
 		?>
 	</div>

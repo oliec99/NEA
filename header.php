@@ -17,7 +17,8 @@
 			<ul>
 				<li><a href="index.php">Home</a>
 					<a href="booking.php">Booking</a>
-					<a href="equipment.php">Equipment</a><style>header nav ul li a{padding-right: 5px; padding-left: 5px;} header nav ul li a:hover{font-weight: bold;}</style>
+					<a href="equipment.php">Equipment Fault</a>
+					<a href="equipmentadd.php">Add Equipment</a>
 
 				</li>
 			</ul>
