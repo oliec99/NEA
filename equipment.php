@@ -30,7 +30,7 @@
 							<option value='9'>9</option>
 							<option value='10'>10</option>
 						</select>
-						<button type='submit' name'submit'>Add</button>
+						<button type='submit' name ='submit'>Report</button>
 					</form>";
 			}else{
 				echo "<h3>Please Login or Signup to view this page</h3>";

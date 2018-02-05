@@ -4,15 +4,16 @@ if (isset($_POST['submit'])){
 	
 	include_once 'dbh.inc.php';
 	
-	$name = mysqli_real_escape_string($conn, $_POST['name']);
+	$make = mysqli_real_escape_string($conn, $_POST['make']);
+	$model = mysqli_real_escape_string($conn, $_POST['model']);
 	$type = mysqli_real_escape_string($conn, $_POST['type']);
 	$quantity = mysqli_real_escape_string($conn, $_POST['quantity']);
-	$equipmentid = $name . $type;
+	$equipmentid = $make . $model . $type;
 	
 	//Error handlers
 	//Check for empty fields
-	if (empty($name) || empty($type) || empty($quantity)){
-		header("Location: ../equipmentadd.php?signup=empty");
+	if (empty($make) || empty($model) || empty($type) || empty($quantity)){
+		header("Location: ../equipmentadd.php?add=empty");
 		exit();
 	}else{
 		$sql = "SELECT * FROM equipment WHERE equipment_id='$equipmentid'";
@@ -20,12 +21,12 @@ if (isset($_POST['submit'])){
 		$resultCheck = mysqli_num_rows($result);
 
 		if ($resultCheck > 0){
-			$sql = "INSERT INTO equipment (equipment_quantity) VALUES (equipment_quantity + '$quantity');";
+			$sql = "UPDATE equipment SET equipment_quantity = equipment_quantity + $quantity,  WHERE equipment_id='$equipmentid';"
 			mysqli_query($conn, $sql);
 			header("Location: ../equipmentadd.php?add=success");
 			exit();
 		}else{
-			$sql = "INSERT INTO equipment (equipment_id, equipment_name, equipment_type, equipment_quantity) VALUES ('$equipmentid', ('$name'), ('$type'), ('$quantity'));";
+			$sql = "INSERT INTO equipment (equipment_id, equipment_make, equipment_model, equipment_type, equipment_quantity) VALUES ('$equipmentid', '$make', '$model', '$type', $quantity);";
 			mysqli_query($conn, $sql);
 			header("Location: ../equipmentadd.php?add=success");
 			exit();

@@ -6,10 +6,11 @@
 	<div class="main-wrapper">
 		<h2>Equipment</h2>
 		<?php
-			if (isset($_SESSION['u_id']) =='admin'){
+			if (($_SESSION['u_uid']) =='admin'){
 				echo "<h3>Add Equipment</h3>
 					<form class='equipmentadd-form' action='includes/equipmentadd.inc.php' method='POST'>
-						<input type='text' name='name' placeholder='Equipment Name'></input>
+						<input type='text' name='make' placeholder='Equipment Make'></input>
+						<input type='text' name='model' placeholder='Equipment Model'</input>
 						<select id='type' name='type'>
 							<option value='0'>Select Type of Equipment</option>
 							<option value='mic'>Microphone</option>
@@ -30,7 +31,7 @@
 							<option value='9'>9</option>
 							<option value='10'>10</option>
 						</select>
-						<button type='submit' name'submit'>Add</button>
+						<button type='submit' name ='submit'>Add</button>
 					</form>";
 			}else{
 				echo "<h3>You must be an admin to access this page</h3>";

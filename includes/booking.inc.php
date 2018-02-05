@@ -7,8 +7,8 @@ if (isset($_POST['submit'])){
 	$date = mysqli_real_escape_string($conn, $_POST['date']);
 	$period = mysqli_real_escape_string($conn, $_POST['period']);
 	$bookingid = $period . $date;
-	echo $bookingid;
 	$uid = ($_SESSION['u_uid']);
+	$fulfilled = FALSE;
 	//Error handlers
 	//Check for empty fields
 	if (empty($date) || empty($period)){
@@ -23,7 +23,7 @@ if (isset($_POST['submit'])){
 			header("Location: ../booking.php?booking=alreadybooked");
 			exit();
 		}else{			
-			$sql = "INSERT INTO booking (booking_id, user_id, booking_date, booking_time) VALUES ('$bookingid', '$uid', '$date', '$period');";
+			$sql = "INSERT INTO bookings (booking_id, user_id, booking_date, booking_time, booking_fulfilled) VALUES ('$bookingid', '$uid', '$date', '$period', '$fulfilled');";
 			mysqli_query($conn, $sql);
 			header("Location: ../booking.php?booking=success");
 			exit();

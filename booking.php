@@ -23,7 +23,7 @@
   						<option value="p5">Period 5</option>
   						<option value="p6">After School</option>
 					</select><style>.booking-form select{width: 100%; height: 40px; padding: 0px 5%; margin-bottom: 4px; border: none; background-color: #fff; font-family: arial; font-size: 16px; color: #111; line-height: 40px;}</style>
-					<button type="submit" name"submit">Book</button><style>.booking-form button{display: block; margin: 0 auto; width: 30%; height: 40px; border: none; background-color: #222; font-family: arial; font-size: 16px; color: #fff; cursor: pointer;}';
+					<button type="submit" name ="submit">Book</button><style>.booking-form button{display: block; margin: 0 auto; width: 30%; height: 40px; border: none; background-color: #222; font-family: arial; font-size: 16px; color: #fff; cursor: pointer;}';
 			}else{
 				echo "<h3>You must be logged in to book the studio.</h3>";
 			}
