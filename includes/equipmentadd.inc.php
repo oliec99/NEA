@@ -21,9 +21,8 @@ if (isset($_POST['submit'])){
 		$resultCheck = mysqli_num_rows($result);
 
 		if ($resultCheck > 0){
-			$sql = "UPDATE equipment SET equipment_quantity = equipment_quantity + $quantity,  WHERE equipment_id='$equipmentid';"
-			mysqli_query($conn, $sql);
-			header("Location: ../equipmentadd.php?add=success");
+			$sql = "UPDATE equipment SET equipment_quantity=$quantity WHERE equipment_id='$equipmentid';";
+			header("Location: ../equipmentadd.php?add=ammended");
 			exit();
 		}else{
 			$sql = "INSERT INTO equipment (equipment_id, equipment_make, equipment_model, equipment_type, equipment_quantity) VALUES ('$equipmentid', '$make', '$model', '$type', $quantity);";

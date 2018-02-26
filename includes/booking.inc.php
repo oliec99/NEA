@@ -1,6 +1,6 @@
 <?php
-
-if (isset($_POST['submit'])){
+	session_start();
+	if (isset($_POST['submit'])){
 	
 	include_once 'dbh.inc.php';
 	
@@ -23,7 +23,7 @@ if (isset($_POST['submit'])){
 			header("Location: ../booking.php?booking=alreadybooked");
 			exit();
 		}else{			
-			$sql = "INSERT INTO bookings (booking_id, user_id, booking_date, booking_time, booking_fulfilled) VALUES ('$bookingid', '$uid', '$date', '$period', '$fulfilled');";
+			$sql = "INSERT INTO bookings (booking_id, user_uid, booking_date, booking_time, booking_fulfilled) VALUES ('$bookingid', '$uid', '$date', '$period', '$fulfilled');";
 			mysqli_query($conn, $sql);
 			header("Location: ../booking.php?booking=success");
 			exit();
