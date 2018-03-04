@@ -1,5 +1,5 @@
 <?php
-	include_once 'header.php';
+	include_once 'header.php';	
 ?>
 
 <section class="main-container">
@@ -11,6 +11,7 @@
 			$fullyFunc = 1;
 			$partialFunc = 0;
 			$notFunc = 0;
+
 			if (isset($_SESSION['u_id'])){
 				echo "
 					<body>

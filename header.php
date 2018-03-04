@@ -19,6 +19,7 @@
 					<a href="booking.php">Booking</a>
 					<a href="equipment.php">Equipment Fault</a>
 					<a href="equipmentadd.php">Add Equipment</a>
+					<a href="adminsettings.php">Settings</a>
 
 				</li>
 			</ul>
