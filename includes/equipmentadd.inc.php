@@ -21,7 +21,7 @@ if (isset($_POST['submit'])){
 		$resultCheck = mysqli_num_rows($result);
 
 		if ($resultCheck > 0){
-			$sql = "UPDATE equipment SET equipment_quantity = equipment_quantity + '2' WHERE equipment_id = '$equipmentid';";
+			$sql = "UPDATE equipment SET equipment_quantity = equipment_quantity + 2 WHERE equipment_id = '$equipmentid';";
 			header("Location: ../equipmentadd.php?add=ammended");
 			exit();
 		}else{
