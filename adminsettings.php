@@ -59,6 +59,36 @@
 				echo "<button type='submit' name ='submit'>Remove User</button>";
 
 				echo "</form>";
+				$sql="SELECT equipment_id FROM equipment";
+				$result=mysqli_query($conn, $sql);
+				echo "<form class='removeequipment-form' action='includes/adminsettingsequipment.inc.php' method='POST'>";
+				
+				echo "<select id='equipment' name='equipment'>
+					<option value='0'>Select Equipment</option>";
+				while ($row = mysqli_fetch_array($result)){
+					echo "<option value'" . $row['equipment_id'] ."'>" . $row['equipment_id'] ."</option>";
+				}
+
+				echo "</select>";
+
+				echo "<select id='quantity' name='quantity'>
+						<option value='0'>Select Quantity</option>
+						<option value='1'>- 1</option>
+						<option value='1'>- 2</option>
+						<option value='1'>- 3</option>
+						<option value='1'>- 4</option>
+						<option value='1'>- 5</option>
+						<option value='1'>- 6</option>
+						<option value='1'>- 7</option>
+						<option value='1'>- 8</option>
+						<option value='1'>- 9</option>
+						<option value='1'>- 10</option>
+						</select>";
+
+
+				echo "<button type='submit' name ='submit'>Remove Equipment</button>";
+
+				echo "</form>";
 				}else{
 					echo "<h3>You must be an admin to access this page</h3>";
 				}
