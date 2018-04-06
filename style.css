@@ -221,7 +221,7 @@ header .nav-login a:hover{
 }
 
 .piechart{
-	background-color: #ccc;
+	background-color: #fff;
 }
 
 
@@ -429,8 +429,61 @@ header .nav-login a:hover{
 	font-size: 16px; 
 	color: #111; 
 	line-height: 40px;
+}
+
+.removebooking-form button{
+	display: block; 
+	margin: 0 auto;
+	width: 30%; 
+	height: 40px; 
+	border: none; 
+	background-color: 
+	#222; font-family: arial; 
+	font-size: 16px; 
+	color: #fff; 
+	cursor: pointer;
+}
+
+.removebooking-form select{
+	width: 100%; 
+	height: 40px; 
+	padding: 0px 5%;
+	margin-top: 20px;
+	margin-bottom: 4px; 
+	border: none; 
+	background-color: #fff; 
+	font-family: arial; 
+	font-size: 16px; 
+	color: #111; 
+	line-height: 40px;
+}		
+
+.removeuser-form button{
+	display: block; 
+	margin: 0 auto;
+	width: 30%; 
+	height: 40px; 
+	border: none; 
+	background-color: 
+	#222; font-family: arial; 
+	font-size: 16px; 
+	color: #fff; 
+	cursor: pointer;
+}
+
+.removeuser-form select{
+	width: 100%; 
+	height: 40px; 
+	padding: 0px 5%;
+	margin-top: 20px;
+	margin-bottom: 4px; 
+	border: none; 
+	background-color: #fff; 
+	font-family: arial; 
+	font-size: 16px; 
+	color: #111; 
+	line-height: 40px;
 }	
-	
 	
 	
 	

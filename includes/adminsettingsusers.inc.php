@@ -4,17 +4,17 @@ if (isset($_POST['submit'])){
     
     include_once 'dbh.inc.php';
     
-    $equipment = mysqli_real_escape_string($conn, $_POST['equipment']);
+    $user = mysqli_real_escape_string($conn, $_POST['users']);
     
     //Error handlers
     //Check for empty fields
-    if (empty($equipment)){
-        header("Location: ../adminsettings.php?remove=empty");
+    if (empty($user)){
+        header("Location: ../adminsettings.php?removeuser=empty");
         exit();
     }else{
-        $sql = "DELETE FROM faults WHERE equipment_id='$equipment'";
+        $sql = "DELETE FROM users WHERE user_uid='$user'";
         $result = mysqli_query($conn, $sql);
-        header("Location: ../adminsettings.php?fault=removed");
+        header("Location: ../adminsettings.php?user=removed");
         exit();
     }
     
