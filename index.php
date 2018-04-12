@@ -20,7 +20,7 @@
 			$partialFunc = 0;
 			$notFunc = 0;
 
-			$sql1 = "SELECT booking_id FROM bookings WHERE booking_date='$date' AND booking_time='$periodTime'";
+			$sql1 = "SELECT booking_id FROM bookings WHERE booking_date='$date' AND timetable_id='$periodTime'";
 			$result1 = mysqli_query($conn, $sql1);
 			$resultCheck1 = mysqli_num_rows($result1);
 
@@ -47,7 +47,12 @@
 				$notFunc = 1;
 			}			
 
-			if (isset($_SESSION['u_id'])){
+			if (isset($_SESSION['u_uid'])){
+				echo "<h3> Hello, ";
+				echo $_SESSION['u_first'];
+				echo " ";
+				echo $_SESSION['u_last'];
+				echo"</h3>";
 				echo "
 					<body>
 						<div id='availabilityChart'></div>

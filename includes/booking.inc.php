@@ -23,7 +23,7 @@
 			header("Location: ../booking.php?booking=alreadybooked");
 			exit();
 		}else{			
-			$sql = "INSERT INTO bookings (booking_id, user_uid, booking_date, booking_time, booking_fulfilled) VALUES ('$bookingid', '$uid', '$date', '$period', '$fulfilled');";
+			$sql = "INSERT INTO bookings (booking_id, user_uid, booking_date, timetable_id, booking_fulfilled) VALUES ('$bookingid', '$uid', '$date', '$period', '$fulfilled');";
 			mysqli_query($conn, $sql);
 			header("Location: ../booking.php?booking=success");
 			exit();

@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 if (isset($_POST['submit'])){
     
     include_once 'dbh.inc.php';
@@ -7,6 +9,7 @@ if (isset($_POST['submit'])){
     $equipment = mysqli_real_escape_string($conn, $_POST['equipment']);
     $severity = mysqli_real_escape_string($conn, $_POST['severity']);
     $quantity = mysqli_real_escape_string($conn, $_POST['quantity']);
+    $uid = $_SESSION['u_uid'];
     
     //Error handlers
     //Check for empty fields
@@ -30,7 +33,7 @@ if (isset($_POST['submit'])){
             header("Location: ../equipment.php?fault=alreadyreported");
             exit();
         }else{
-            $sql = "INSERT INTO faults (equipment_id, fault_severity) VALUES ('$equipment', '$severity');";
+            $sql = "INSERT INTO faults (equipment_id, fault_severity, user_uid ) VALUES ('$equipment', '$severity', '$uid');";
             mysqli_query($conn, $sql);
             header("Location: ../equipment.php?fault=reported");
             exit();

@@ -307,6 +307,7 @@ header .nav-login a:hover{
 .booking-form button{
 	display: block; 
 	margin: 0 auto;
+	margin-bottom: 10px;
 	width: 30%; 
 	height: 40px; 
 	border: none; 
@@ -510,8 +511,57 @@ header .nav-login a:hover{
 	font-size: 16px; 
 	color: #111; 
 	line-height: 40px;
+}
+
+.view-booking button{
+	margin-top: 30px;
+	display: block; 
+	margin: 0 auto;
+	width: 30%; 
+	height: 40px; 
+	border: none; 
+	background-color: 
+	#222; font-family: arial; 
+	font-size: 16px; 
+	color: #fff; 
+	cursor: pointer;
 }	
-	
+
+.view-faults button{
+	margin-top: 30px;
+	display: block; 
+	margin: 0 auto;
+	width: 30%; 
+	height: 40px; 
+	border: none; 
+	background-color: 
+	#222; font-family: arial; 
+	font-size: 16px; 
+	color: #fff; 
+	cursor: pointer;
+}	
+
+.main-container table{
+	margin-top: 40px;
+	margin-right: 500px;
+	border-collapse: collapse;
+	width: 100%;
+	font-family: arial;
+	font-size: 20px;
+	text-align: center;
+}
+
+.main-container th{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: green;
+	color: white;
+}
+
+
+.main-container tr:nth-child(even){
+	background-color: #f2f2f2;
+}
 	
 	
 	

@@ -7,11 +7,14 @@
 	<div class="main-wrapper">
 		<h2>Settings</h2>
 		<?php
-			if (isset($_SESSION['u_id'])){
+			if (isset($_SESSION['u_uid'])){
 				if (($_SESSION['u_uid']) =='admin'){
 					$sql="SELECT equipment_id FROM faults";
 					$result=mysqli_query($conn, $sql);
 					echo "<h3>Change and Modify Settings</h3>
+						<form class='view-faults' action='faultview.php' method='POST'>
+						<button type='submit' name='submit'>View Faults</button>
+						</form>
 							<form class='removefault-form' action='includes/adminsettings.inc.php' method='POST'>";
 					
 					echo "<select id='equipment' name='equipment'>

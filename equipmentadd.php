@@ -6,7 +6,7 @@
 	<div class="main-wrapper">
 		<h2>Equipment</h2>
 		<?php
-			if (isset($_SESSION['u_id'])){
+			if (isset($_SESSION['u_uid'])){
 				if (($_SESSION['u_uid']) =='admin'){
 					echo "<h3>Add Equipment</h3>
 						<form class='equipmentadd-form' action='includes/equipmentadd.inc.php' method='POST'>
