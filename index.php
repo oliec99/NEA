@@ -48,7 +48,7 @@
 			}			
 
 			if (isset($_SESSION['u_uid'])){
-				echo "<h3> Hello, ";
+				echo "<h3> Welcome, ";
 				echo $_SESSION['u_first'];
 				echo " ";
 				echo $_SESSION['u_last'];
