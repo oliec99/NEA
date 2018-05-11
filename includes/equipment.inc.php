@@ -14,7 +14,7 @@ if (isset($_POST['submit'])){
     //Error handlers
     //Check for empty fields
     if (empty($equipment) || empty($severity) || empty($quantity)){
-        header("Location: ../equipmentadd.php?add=empty");
+        header("Location: ../equipment.php?equipment=empty");
         exit();
     }else{
         $sql = "SELECT * FROM faults WHERE equipment_id='$equipment'";
